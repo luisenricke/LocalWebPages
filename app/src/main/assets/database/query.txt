@@ -1,0 +1,59 @@
+CREATE TABLE "WebPage_" (
+	"id_" INTEGER NOT NULL PRIMARY KEY,
+	"title_" TEXT,
+	"body_" TEXT,
+	"description_" TEXT,
+	"active_" INTEGER
+);
+
+INSERT INTO "WebPage_" VALUES (1,'About','<div class="container">
+        <div class="col-md-12">
+            <p>Hello! I''m Luis Enrique, a software engineer based in Tuxtla Gutiérrez, Chiapas who is enthusiastic of Android Development.</p>
+            <p>I’m in search of good software implementations. I like to learn new tech stuff and solve problems with a great music and code. I would like to grow professionally and actively collaborate as a team.</p>
+
+        </div>
+        <ul>
+            <li>Java</li>
+            <li>Kotlin</li>
+            <li>SQL</li>
+            <li>PHP</li>
+            <li>Laravel</li>
+            <li>Git</li>
+        </ul>
+    </div>','This is a short description about myself',1);
+INSERT INTO "WebPage_" VALUES (2,'Experience','<div class="container">
+        <div class="col-md-12">
+         <dl>
+            <dt>Android developer -> <a href="http://bitzero.mx/">Bitzero</a>: April 2019 - Present</dt>
+            <dd>- Native development for the functionality of the applications such as changes to the UI, internal
+            calculations and management of asynchronous processes.</dd>
+            <dd>- Dealing with requests for data on private and public servers.</dd>
+            <dd>- Implemented internal and external data storage with SQLite and Android Data.</dd>
+            <dd>- Creation and manipulation of layouts for UI.</dd>
+            <dd>- Optimize the configuration of the projects to be less heavy and fast with Gradle.</dd>
+            <dd>- Use of libraries such as Material Design, Room, Picasso, Retrofit.</dd>
+        </dl>
+    </div>','This is my experience',1);
+INSERT INTO "WebPage_" VALUES (3,'Work','<div class="container">
+        <div class="col-md-12">
+         <dl>
+            <dt>GardenKit - <a href="https://github.com/luisenricke/GardenKit">Github</a></dt>
+            <dd>- This is a simple application that connects to a third-party server to obtain data from a plant''s sensors </dd>
+            <dt>Algorithms - <a href="https://github.com/luisenricke/Algorithms">Github</a></dt>
+            <dd>- This is a repository where solved exercises from different platforms are stored, such as "HackerRank", "Leetcode", among others</dd>
+            <dt>PlantUML-Template - <a href="https://github.com/luisenricke/PlantUML-Template">Github</a></dt>
+            <dd>- This is a repository where use case and relational models can be generated in a structured and simple way, without so many UI complications</dd>
+        </dl>
+    </div>
+','These are the projects I''ve collaborated on',1);
+INSERT INTO "WebPage_" VALUES (4,'Contact','<div class="container">
+        <div class="col-md-12">
+         <p>Although I''m not currently looking for freelance opportunities, my inbox is always open. Whether for a potential project or just to say hi, I''ll try my best to answer your email!
+         </p>
+         <ul>
+            <li>Github: luisenricke</li>
+            <li>LinkedIn: luisvillalobosmelendez</li>
+            <li>Twitter: @LuisEnricKe</li>
+            <li>Instagram: @LuisEnricKe</li>
+        </ul>
+    </div>','This is my contact',1);

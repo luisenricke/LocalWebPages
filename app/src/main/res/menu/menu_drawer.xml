@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/ic_turned_in_black_24dp"
+            android:title="About" />
+
+        <item
+            android:id="@+id/menu_experience"
+            android:icon="@drawable/ic_people_black_24dp"
+            android:title="Experience" />
+
+        <item
+            android:id="@+id/menu_work"
+            android:icon="@drawable/ic_phonelink_black_24dp"
+            android:title="Work" />
+
+        <item
+            android:id="@+id/menu_contact"
+            android:icon="@drawable/ic_perm_phone_msg_black_24dp"
+            android:title="Contact" />
+    </group>
+</menu>

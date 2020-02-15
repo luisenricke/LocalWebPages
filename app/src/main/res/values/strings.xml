@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">LocalWebPages</string>
+    <string name="app_name">Local Web Pages</string>
+
+    <string name="name">Luis Villalobos</string>
+    <string name="email">luisvillalobosmelendez@outlook.com</string>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
 </resources>

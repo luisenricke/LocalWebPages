@@ -11,7 +11,8 @@ import androidx.core.widget.NestedScrollView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.ui.*
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.NavigationUI
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.navigation.NavigationView
 import com.luisenricke.localwebpages.R
@@ -31,13 +32,10 @@ class MainActivity : AppCompatActivity(),
     // Navigation Component
     lateinit var drawer: DrawerLayout
     lateinit var nestedScroll: NestedScrollView
-    lateinit var appConfig: AppBarConfiguration
+    lateinit var appBarConfig: AppBarConfiguration
     lateinit var navController: NavController
     lateinit var navView: NavigationView
-    val homeNavigation: Set<Int> = setOf(
-        R.id.menu_about, R.id.menu_experience,
-        R.id.menu_work, R.id.menu_contact
-    )
+    val navFragmentsHome: Set<Int> = setOf(R.id.webFragment)
 
     // Database
     lateinit var database: WebDatabase
@@ -85,7 +83,7 @@ class MainActivity : AppCompatActivity(),
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        return NavigationUI.navigateUp(navController, appConfig) ||
+        return NavigationUI.navigateUp(navController, appBarConfig) ||
                 super.onSupportNavigateUp()
     }
 
@@ -117,9 +115,9 @@ class MainActivity : AppCompatActivity(),
         drawer = findViewById<DrawerLayout>(R.id.layout_drawer)
         navView = findViewById<NavigationView>(R.id.navigation)
         navController = Navigation.findNavController(this, R.id.fragment_host)
-        appConfig = AppBarConfiguration.Builder(R.id.webFragment).setDrawerLayout(drawer).build()
+        appBarConfig = AppBarConfiguration.Builder(navFragmentsHome).setDrawerLayout(drawer).build()
 
-        NavigationUI.setupActionBarWithNavController(this, navController, appConfig)
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfig)
         NavigationUI.setupWithNavController(navView, navController)
 
         navView.setNavigationItemSelectedListener(this)
